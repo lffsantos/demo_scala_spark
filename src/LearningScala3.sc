@@ -34,3 +34,19 @@ transformInt(2, x => {
 // Strings have a built-in .toUpperCase method. For example, "foo".toUpperCase gives you back FOO.
 // Write a function that converts a string to upper-case, and use that function of a few test strings.
 // Then, do the same thing using a function literal instead of a separate, named function.
+
+
+def upperString(name: String) : String = {
+    name.toUpperCase()
+}
+
+upperString("teste")
+
+
+def editName(name: String, fn: String => String) : String = {
+    fn(name)
+}
+
+val result = editName("lucas", upperString)
+
+editName("lucas", name => "oi " + name)
